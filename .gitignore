@@ -1,6 +1,6 @@
 .DS_Store
 .gradle/
-.gradle
+out
 build/
 rbk-lang.iml
 rbk-lang.ipr
