@@ -8,9 +8,9 @@ import org.rbklang.grammer.RbkLangGrammar;
 import java.util.List;
 
 import static java.util.Arrays.asList;
-import static junit.framework.Assert.assertFalse;
-import static junit.framework.Assert.assertTrue;
+import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.mockito.Mockito.mock;
 
 public class ParserTest {

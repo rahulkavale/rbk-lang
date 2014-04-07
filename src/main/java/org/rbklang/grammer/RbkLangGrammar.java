@@ -15,11 +15,11 @@ public class RbkLangGrammar implements Grammar {
 
   private Set<ProductionRule> productionRules = new HashSet<>();
 
-  private HashSet operators = new HashSet() {{
+  private HashSet operators = new HashSet<Character>() {{
     addAll(asList('+', '-', '*', '/', '%', '^'));
   }};
 
-  private HashSet braces = new HashSet() {{
+  private HashSet braces = new HashSet<Character>() {{
     addAll(asList('(', ')', '{', '}'));
   }};
 
