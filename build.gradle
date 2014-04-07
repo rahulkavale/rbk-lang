@@ -1,2 +1,11 @@
 apply plugin: 'java'
 apply plugin: 'idea'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testCompile group: 'junit', name: 'junit', version: '4.+',
+  'org.mockito:mockito-all:1.9.5'
+}
