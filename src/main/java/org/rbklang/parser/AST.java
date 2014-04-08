@@ -1,8 +1,8 @@
 package org.rbklang.parser;
 
 import org.rbklang.Exception.MethodMissingException;
+import org.rbklang.core.Method;
 import org.rbklang.core.Operand;
-import org.rbklang.core.Operator;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ public class AST {
     this.tokens = tokens;
   }
 
-  public Operator getOperator() throws MethodMissingException {
-    return new Operator(tokens.get(1));
+  public Method getOperator() throws MethodMissingException {
+    return new Method(tokens.get(1));
   }
 
   public Operand getCaller() {
