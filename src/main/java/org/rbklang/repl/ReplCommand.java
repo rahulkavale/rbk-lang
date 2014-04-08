@@ -6,7 +6,7 @@ public class ReplCommand extends Command {
   }
 
   @Override
-  public Object execute() {
+  public String execute() {
 
     String result = "";
     if (userInput.equals("help")) {

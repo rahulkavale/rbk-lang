@@ -1,6 +1,7 @@
 package org.rbklang.parser;
 
 import org.rbklang.Exception.GrammarInApplicableException;
+import org.rbklang.core.Operation;
 import org.rbklang.grammer.Grammar;
 
 import java.util.ArrayList;
@@ -14,8 +15,10 @@ public class Parser {
     this.grammar = grammar;
   }
 
-  public AST parse(String input) throws GrammarInApplicableException {
-    return grammar.generateAST(this.tokenize(input));
+  public Operation parse(String input) throws GrammarInApplicableException {
+    List<String> tokenizedInput = this.tokenize(input);
+    AST ast = grammar.generateAST(tokenizedInput);
+    return new Operation(ast);
   }
 
   public List<String> tokenize(String input) {

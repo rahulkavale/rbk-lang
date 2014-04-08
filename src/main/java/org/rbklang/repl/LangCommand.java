@@ -1,8 +1,8 @@
 package org.rbklang.repl;
 
 import org.rbklang.Exception.GrammarInApplicableException;
+import org.rbklang.core.Operation;
 import org.rbklang.grammer.Grammar;
-import org.rbklang.parser.AST;
 import org.rbklang.parser.Parser;
 
 public class LangCommand extends Command {
@@ -14,8 +14,8 @@ public class LangCommand extends Command {
   }
 
   @Override
-  public Object execute() throws GrammarInApplicableException {
-    AST ast = parser.parse(userInput);
-    return "Abstrct Syntax tree is : \n " + ast.toString();
+  public String execute() throws GrammarInApplicableException {
+    Operation operation = parser.parse(userInput);
+    return operation.execute();
   }
 }

@@ -42,12 +42,7 @@ public class RbkLangGrammar implements Grammar {
 //  TODO implementation not complete
   @Override
   public AST generateAST(List<String> tokens) throws GrammarInApplicableException {
-    for (ProductionRule productionRule : this.productionRules) {
-      if (!applicable(productionRule, tokens)) {
-        throw new GrammarInApplicableException();
-      }
-    }
-    return null;
+    return new AST(tokens);
   }
 
 //  TODO may not be the right place for this method

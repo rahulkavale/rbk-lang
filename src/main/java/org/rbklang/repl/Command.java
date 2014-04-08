@@ -10,7 +10,7 @@ public abstract class Command {
     this.userInput = userInput;
   }
 
-  public abstract Object execute() throws GrammarInApplicableException;
+  public abstract String execute() throws GrammarInApplicableException;
 
   public static boolean isReplCommand(String userInputCommand) {
     return userInputCommand.equals("help") || userInputCommand.equals("version") || userInputCommand.equals("exit");
