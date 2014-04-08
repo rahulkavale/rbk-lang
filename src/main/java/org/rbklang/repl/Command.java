@@ -1,6 +1,7 @@
 package org.rbklang.repl;
 
 import org.rbklang.Exception.GrammarInApplicableException;
+import org.rbklang.Exception.MethodMissingException;
 import org.rbklang.grammer.Grammar;
 
 public abstract class Command {
@@ -10,7 +11,7 @@ public abstract class Command {
     this.userInput = userInput;
   }
 
-  public abstract String execute() throws GrammarInApplicableException;
+  public abstract String execute() throws GrammarInApplicableException, MethodMissingException;
 
   public static boolean isReplCommand(String userInputCommand) {
     return userInputCommand.equals("help") || userInputCommand.equals("version") || userInputCommand.equals("exit");

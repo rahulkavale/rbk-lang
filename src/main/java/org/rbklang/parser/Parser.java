@@ -1,6 +1,7 @@
 package org.rbklang.parser;
 
 import org.rbklang.Exception.GrammarInApplicableException;
+import org.rbklang.Exception.MethodMissingException;
 import org.rbklang.core.Operation;
 import org.rbklang.grammer.Grammar;
 
@@ -15,7 +16,7 @@ public class Parser {
     this.grammar = grammar;
   }
 
-  public Operation parse(String input) throws GrammarInApplicableException {
+  public Operation parse(String input) throws GrammarInApplicableException, MethodMissingException {
     List<String> tokenizedInput = this.tokenize(input);
     AST ast = grammar.generateAST(tokenizedInput);
     return new Operation(ast);
