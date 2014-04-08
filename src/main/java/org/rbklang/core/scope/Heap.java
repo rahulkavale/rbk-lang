@@ -1,9 +1,6 @@
 package org.rbklang.core.scope;
 
-import org.rbklang.core.Instance;
-import org.rbklang.core.Method;
-import org.rbklang.core.RbkClass;
-import org.rbklang.core.RbkClassLoader;
+import org.rbklang.core.*;
 
 import java.util.HashMap;
 import java.util.List;

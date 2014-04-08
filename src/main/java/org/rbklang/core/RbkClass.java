@@ -8,14 +8,14 @@ import java.util.Map;
 import static java.util.Arrays.asList;
 
 public class RbkClass {
-  private String className;
-  private Class aClass;
+  protected String className;
+  protected java.lang.Class aClass;
 
 //  need to implement declaring a class
-  private Map<String, Field> fieldsMap = new HashMap<>();
-  private Map<String, Method> methodsMap = new HashMap<>();
+  protected Map<String, Field> fieldsMap = new HashMap<>();
+  protected Map<String, Method> methodsMap = new HashMap<>();
 
-  public RbkClass(String className, Class aClass) throws ClassNotFoundException {
+  public RbkClass(String className, java.lang.Class aClass) throws ClassNotFoundException {
     this.className = className;
     this.aClass = aClass;
   }
@@ -28,5 +28,9 @@ public class RbkClass {
     List<Field> fields = new ArrayList<>(fieldsMap.values());
     List<Method> methods = new ArrayList<>(methodsMap.values());
     return new Instance(new RbkObject(fields, methods));
+  }
+
+  public String getName() {
+    return aClass.getName();
   }
 }

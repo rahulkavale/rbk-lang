@@ -3,7 +3,7 @@ package org.rbklang.core;
 import org.rbklang.core.scope.Heap;
 
 public class Scope {
-  private static Heap heap;
+  private static Heap heap = new Heap();
 
   public static Instance getInstance(String operand) {
     return heap.getInstanceWithName(operand);
@@ -18,3 +18,10 @@ public class Scope {
     return heap.newInstance(className);
   }
 }
+
+
+
+
+
+
+
